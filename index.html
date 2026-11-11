@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Spark-8 — robot konkursowy | xChallenge</title>
-  <meta name="description" content="Spark-8: robot z napędem mecanum i 5-osiowym ramieniem, sterowany przez dwóch operatorów. Poznaj robota i zespół, który go zbudował.">
+  <meta name="description" content="Spark-8: robot z napędem mecanum i 6-osiowym ramieniem, sterowany przez dwóch operatorów. Poznaj robota i zespół, który go zbudował.">
   <meta name="theme-color" content="#0B0B0D">
 
   <!-- OPEN GRAPH (podgląd linku po udostępnieniu).
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:title" content="Spark-8 — robot konkursowy">
-  <meta property="og:description" content="Napęd mecanum, 5-osiowe ramię i dwóch operatorów. Poznaj robota Spark-8 i jego zespół.">
+  <meta property="og:description" content="Napęd mecanum, 6-osiowe ramię i dwóch operatorów. Poznaj robota Spark-8 i jego zespół.">
   <meta property="og:image" content="https://spark8-team.github.io/images/og-image.jpg">
   <meta property="og:url" content="https://spark8-team.github.io/">
   <meta name="twitter:card" content="summary_large_image">
@@ -85,12 +85,12 @@
           </div>
         </div>
 
-        <!-- ZDJĘCIE: robot w całości, ujęcie z przodu pod kątem; pionowe 1000x1200 -->
-        <figure class="ph hud ph--glow hero__media reveal" data-dir="right" style="--ar:1000/1200">
+        <!-- ZDJĘCIE: robot w całości (pionowe 1000x1500) -->
+        <figure class="ph hud ph--glow hero__media reveal" data-dir="right" style="--ar:2/3">
           <div class="ph__inner">
-            <img src="images/robot-hero.webp" alt="Robot Spark-8 z ramieniem i podwoziem mecanum" width="1000" height="1200" fetchpriority="high">
+            <img src="images/robot-hero.webp" alt="Robot Spark-8: czarne ramię z chwytakiem na podwoziu z kołami mecanum" width="1000" height="1500" fetchpriority="high">
           </div>
-          <figcaption class="ph__label">robot-hero.webp<br>1000 × 1200 · robot w całości</figcaption>
+          <figcaption class="ph__label">robot-hero.webp</figcaption>
         </figure>
       </div>
 
@@ -100,8 +100,8 @@
     <!-- PASEK Z PRZEWIJAJĄCYM SIĘ NAPISEM (ozdobnik) -->
     <div class="ticker" aria-hidden="true">
       <div class="ticker__track">
-        <span>MECANUM</span><span>5 OSI</span><span>RASPBERRY PI 5</span><span>WI-FI 5 GHZ</span><span>~3 MS</span><span>2 OPERATORÓW</span>
-        <span>MECANUM</span><span>5 OSI</span><span>RASPBERRY PI 5</span><span>WI-FI 5 GHZ</span><span>~3 MS</span><span>2 OPERATORÓW</span>
+        <span>MECANUM</span><span>6 OSI</span><span>RASPBERRY PI 5</span><span>WI-FI 5 GHZ</span><span>~3 MS</span><span>2 OPERATORÓW</span>
+        <span>MECANUM</span><span>6 OSI</span><span>RASPBERRY PI 5</span><span>WI-FI 5 GHZ</span><span>~3 MS</span><span>2 OPERATORÓW</span>
       </div>
     </div>
 
@@ -115,11 +115,11 @@
 
         <!-- Liczby zmienisz w atrybucie data-count (i w treści obok) -->
         <ul class="stats" data-stagger>
-          <li class="stat reveal"><span class="stat__num"><span data-count="5">5</span></span><span class="stat__label">osi ramienia</span></li>
+          <li class="stat reveal"><span class="stat__num"><span data-count="6">6</span></span><span class="stat__label">osi ramienia</span></li>
           <li class="stat reveal"><span class="stat__num"><span data-count="4">4</span></span><span class="stat__label">koła mecanum</span></li>
           <li class="stat reveal"><span class="stat__num">~<span data-count="3">3</span><small>ms</small></span><span class="stat__label">opóźnienia łączności</span></li>
           <li class="stat reveal"><span class="stat__num"><span data-count="2">2</span></span><span class="stat__label">operatorów</span></li>
-          <li class="stat reveal"><span class="stat__num"><span data-count="6">6</span></span><span class="stat__label">mikrokontrolerów</span></li>
+          <li class="stat reveal"><span class="stat__num"><span data-count="7">7</span></span><span class="stat__label">mikrokontrolerów</span></li>
         </ul>
       </div>
     </section>
@@ -151,8 +151,8 @@
               <span class="card__icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21h8M8 21v-4"/><circle cx="8" cy="15" r="2"/><path d="m9.5 13.5 4-6"/><circle cx="14.5" cy="6" r="1.8"/><path d="m16 7 3 3M19 10l1.5-1.5M19 10l-1 2"/></svg>
               </span>
-              <h3>Ramię 5-osiowe</h3>
-              <p>Pięć osi i chwytak. Każdą oś napędza silnik DC z enkoderem, więc ramię zna swoje dokładne położenie.</p>
+              <h3>Ramię 6-osiowe</h3>
+              <p>Sześć osi zakończonych chwytakiem. Każdą oś napędza silnik DC z enkoderem, więc ramię zna swoje dokładne położenie.</p>
             </article>
           </li>
           <!-- Kafelek: elektronika -->
@@ -163,7 +163,7 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
               </span>
               <h3>Elektronika</h3>
-              <p>Mózgiem jest Raspberry Pi 5. Każda oś ramienia ma własne Arduino Nano, które steruje jej silnikiem.</p>
+              <p>Mózgiem jest Raspberry Pi 5. Każda z sześciu osi ramienia ma własne Arduino Nano, które steruje jej silnikiem.</p>
             </article>
           </li>
           <!-- Kafelek: łączność -->
@@ -222,15 +222,18 @@
             </ul>
           </div>
 
-          <!-- ZDJĘCIE / FILM: ramię master w akcji; poziome 1280x720.
-               Jeśli macie film, zamień <img> na:
+          <!-- ZDJĘCIE: stanowiska operatorów (konsola z ramieniem master + pilot), poziome 1600x900.
+               Później można tu dać film, zamieniając <img> na:
                <video src="video/ramie-master.mp4" autoplay muted loop playsinline width="1280" height="720"></video> -->
-          <figure class="ph hud master__media reveal" data-dir="right" style="--ar:16/9">
-            <div class="ph__inner">
-              <img src="images/ramie-master.webp" alt="Ramię master i ramię robota poruszające się razem" width="1280" height="720" loading="lazy" data-parallax="0.05">
-            </div>
-            <figcaption class="ph__label">ramie-master.webp lub film<br>1280 × 720 · ramię master w akcji</figcaption>
-          </figure>
+          <div class="master__media reveal" data-dir="right">
+            <figure class="ph hud" style="--ar:16/9">
+              <div class="ph__inner">
+                <img src="images/konsola-pilot.webp" alt="Konsola główna z miniaturowym ramieniem master (po lewej) i pilot z joystickami (po prawej)" width="1600" height="900" loading="lazy" data-parallax="0.05">
+              </div>
+              <figcaption class="ph__label">konsola-pilot.webp</figcaption>
+            </figure>
+            <p class="media-cap"><span class="accent">◀</span> Konsola z ramieniem master · Pilot z joystickami <span class="accent">▶</span></p>
+          </div>
         </div>
 
         <!-- Schemat przepływu sygnału -->
@@ -241,7 +244,7 @@
           <li class="flow__link" aria-hidden="true"></li>
           <li class="flow__node"><span class="mono">CPU</span>Raspberry Pi 5<small>mózg robota</small></li>
           <li class="flow__link" aria-hidden="true"></li>
-          <li class="flow__node"><span class="mono">AXIS</span>5× Arduino Nano<small>silniki DC + enkodery</small></li>
+          <li class="flow__node"><span class="mono">AXIS</span>6× Arduino Nano<small>silniki DC + enkodery</small></li>
           <li class="flow__link" aria-hidden="true"></li>
           <li class="flow__node flow__node--out"><span class="mono">OUT</span>Ramię Spark-8<small>powtarza ruch</small></li>
         </ol>
@@ -414,14 +417,12 @@
         <!-- Każde zdjęcie: href = plik w pełnym rozmiarze (lightbox), img = to samo lub mniejsza wersja.
              Klasy g-item--tall / --wide / --big ustawiają asymetryczny rozmiar kafelka. -->
         <div class="gallery" data-stagger>
-          <a class="g-item g-item--tall reveal" href="images/galeria-01.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-01.webp" alt="Spark-8 — zdjęcie 1" width="900" height="1200" loading="lazy"></div><span class="ph__label">galeria-01.webp<br>900 × 1200</span></div></a>
-          <a class="g-item reveal" href="images/galeria-02.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-02.webp" alt="Spark-8 — zdjęcie 2" width="900" height="900" loading="lazy"></div><span class="ph__label">galeria-02.webp<br>900 × 900</span></div></a>
-          <a class="g-item g-item--wide reveal" href="images/galeria-03.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-03.webp" alt="Spark-8 — zdjęcie 3" width="1600" height="900" loading="lazy"></div><span class="ph__label">galeria-03.webp<br>1600 × 900</span></div></a>
-          <a class="g-item reveal" href="images/galeria-04.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-04.webp" alt="Spark-8 — zdjęcie 4" width="900" height="900" loading="lazy"></div><span class="ph__label">galeria-04.webp<br>900 × 900</span></div></a>
-          <a class="g-item g-item--big reveal" href="images/galeria-05.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-05.webp" alt="Spark-8 — zdjęcie 5" width="1600" height="1600" loading="lazy"></div><span class="ph__label">galeria-05.webp<br>1600 × 1600</span></div></a>
-          <a class="g-item reveal" href="images/galeria-06.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-06.webp" alt="Spark-8 — zdjęcie 6" width="900" height="900" loading="lazy"></div><span class="ph__label">galeria-06.webp<br>900 × 900</span></div></a>
-          <a class="g-item g-item--tall reveal" href="images/galeria-07.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-07.webp" alt="Spark-8 — zdjęcie 7" width="900" height="1200" loading="lazy"></div><span class="ph__label">galeria-07.webp<br>900 × 1200</span></div></a>
-          <a class="g-item reveal" href="images/galeria-08.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-08.webp" alt="Spark-8 — zdjęcie 8" width="900" height="900" loading="lazy"></div><span class="ph__label">galeria-08.webp<br>900 × 900</span></div></a>
+          <a class="g-item g-item--tall reveal" href="images/galeria-robot-bok.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-robot-bok.webp" alt="Spark-8 z boku: ramię, chwytak i podwozie mecanum" width="900" height="1600" loading="lazy"></div></div></a>
+          <a class="g-item g-item--wide reveal" href="images/galeria-zasieg.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-zasieg.webp" alt="Ramię Spark-8 w pełnym wysięgu trzyma paczkę cukru przy ścianie" width="1600" height="900" loading="lazy"></div></div></a>
+          <a class="g-item g-item--tall reveal" href="images/galeria-kolo-mecanum.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-kolo-mecanum.webp" alt="Zbliżenie koła mecanum z ukośnymi rolkami" width="900" height="1600" loading="lazy"></div></div></a>
+          <a class="g-item g-item--wide reveal" href="images/galeria-przekladnia.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-przekladnia.webp" alt="Zbliżenie przekładni zębatej w ramieniu" width="1600" height="900" loading="lazy"></div></div></a>
+          <!-- NOWE ZDJĘCIE: skopiuj jedną linię <a ...> powyżej i podmień nazwę pliku oraz opis (alt).
+               Klasa g-item--tall = pionowe, g-item--wide = poziome, bez klasy = kwadrat. -->
         </div>
       </div>
     </section>
@@ -431,6 +432,8 @@
   <!-- ================= 8. STOPKA ================= -->
   <footer class="footer" id="kontakt">
     <div class="container">
+      <!-- LOGO ZESPOŁU (jasna wersja na ciemne tło) -->
+      <img class="footer__brand reveal" src="images/sparkteam-logo-light.png" alt="SparkTeam" width="1400" height="446" loading="lazy">
       <p class="eyebrow reveal">07 // kontakt</p>
       <h2 class="footer__cta reveal">Spotkajmy się<br>przy <span class="accent">robocie.</span></h2>
 
@@ -446,13 +449,11 @@
 
         <div class="reveal">
           <h3 class="footer__title">Sponsorzy</h3>
-          <!-- SPONSORZY: logotypy 400x200 (PNG z przezroczystym tłem), sponsor-1.png ... -->
-          <div class="sponsors">
-            <figure class="ph ph--contain" style="--ar:2/1"><div class="ph__inner"><img src="images/sponsor-1.png" alt="[Nazwa sponsora]" width="400" height="200" loading="lazy"></div><figcaption class="ph__label">sponsor-1.png</figcaption></figure>
-            <figure class="ph ph--contain" style="--ar:2/1"><div class="ph__inner"><img src="images/sponsor-2.png" alt="[Nazwa sponsora]" width="400" height="200" loading="lazy"></div><figcaption class="ph__label">sponsor-2.png</figcaption></figure>
-            <figure class="ph ph--contain" style="--ar:2/1"><div class="ph__inner"><img src="images/sponsor-3.png" alt="[Nazwa sponsora]" width="400" height="200" loading="lazy"></div><figcaption class="ph__label">sponsor-3.png</figcaption></figure>
-            <figure class="ph ph--contain" style="--ar:2/1"><div class="ph__inner"><img src="images/sponsor-4.png" alt="[Nazwa sponsora]" width="400" height="200" loading="lazy"></div><figcaption class="ph__label">sponsor-4.png</figcaption></figure>
-          </div>
+          <!-- SPONSORZY: jasne logotypy (PNG z przezroczystym tłem). Nowego sponsora dodaj jako kolejne <li>. -->
+          <ul class="sponsors">
+            <li><img class="sponsor sponsor--square" src="images/sponsor-donum-corde.png" alt="Donum Corde – Centrum Rehabilitacji, Domy Opieki Medycznej" width="600" height="597" loading="lazy"></li>
+            <li><img class="sponsor sponsor--wide" src="images/sponsor-kochanowicz.png" alt="Kochanowicz – Budowa i utrzymanie dróg" width="900" height="225" loading="lazy"></li>
+          </ul>
         </div>
 
         <div class="reveal">
@@ -467,7 +468,7 @@
       </div>
 
       <div class="footer__bottom">
-        <span>© <span data-year>2026</span> Zespół Spark-8</span>
+        <span>© <span data-year>2026</span> SparkTeam · Spark-8</span>
         <a href="#top" class="to-top">Na górę ↑</a>
       </div>
     </div>

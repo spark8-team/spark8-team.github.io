@@ -163,7 +163,7 @@
     const lines = [
       ['> init spark-8', 'OK'],
       ['> wifi 5 GHz · latency ~3 ms', 'OK'],
-      ['> axis 1–5 · encoders', 'OK'],
+      ['> axis 1–6 · encoders', 'OK'],
       ['> master arm sync', 'READY'],
     ];
     const done = (txt, status) => `${txt} <span class="ok">[${status}]</span>`;
