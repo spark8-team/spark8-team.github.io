@@ -1,8 +1,3 @@
-/* =========================================================
-   SPARK-8 — script.js
-   Czysty JavaScript, bez bibliotek. Każda funkcja odpowiada
-   za jedną część strony (patrz init na samym dole).
-   ========================================================= */
 (() => {
   'use strict';
 
@@ -11,7 +6,6 @@
   const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- 1. ZDJĘCIA: pokaż placeholder, dopóki zdjęcie się nie wczyta ---------- */
   function initImages() {
     $$('.ph img').forEach((img) => {
       const box = img.closest('.ph');
@@ -25,7 +19,6 @@
     });
   }
 
-  /* ---------- 2. MENU (hamburger na telefonie) ---------- */
   function initNav() {
     const burger = $('.burger');
     const nav = $('#nav');
@@ -50,14 +43,12 @@
     if (desktop.addEventListener) desktop.addEventListener('change', () => setOpen(false));
   }
 
-  /* ---------- 3. PRZEWIJANIE: pasek postępu, nagłówek, timeline, paralaksa ---------- */
   function initScroll() {
     const bar = $('.progress__bar');
     const header = $('.header');
     const timeline = $('[data-timeline]');
     const tlProgress = $('.timeline__progress');
     const parallaxEls = $$('[data-parallax]');
-    // Paralaksa tylko na komputerze z myszką i bez ograniczonego ruchu
     const parallaxMq = window.matchMedia('(min-width: 900px) and (pointer: fine)');
     let ticking = false;
 
@@ -98,9 +89,7 @@
     update();
   }
 
-  /* ---------- 4. POJAWIANIE SIĘ ELEMENTÓW PRZY PRZEWIJANIU ---------- */
   function initReveal() {
-    // Kaskadowe opóźnienie dla elementów w grupach [data-stagger]
     $$('[data-stagger]').forEach((group) => {
       $$(':scope > .reveal', group).forEach((el, i) => {
         el.style.setProperty('--d', `${Math.min(i, 6) * 0.08}s`);
@@ -123,7 +112,6 @@
     els.forEach((el) => io.observe(el));
   }
 
-  /* ---------- 5. LICZNIKI (odliczanie od zera) ---------- */
   function initCounters() {
     const els = $$('[data-count]');
     if (reduceMotion || !('IntersectionObserver' in window)) return;
@@ -152,14 +140,12 @@
     els.forEach((el) => io.observe(el));
   }
 
-  /* ---------- 6. HERO: sekwencja "uruchamiania systemu" i glitch ---------- */
   function initHero() {
     const hero = $('.hero');
     const boot = $('[data-boot]');
     const title = $('.glitch');
     if (!hero) return;
 
-    // Linijki sekwencji startowej — możesz je zmienić
     const lines = [
       ['> init spark-8', 'OK'],
       ['> wifi 5 GHz · latency ~3 ms', 'OK'],
@@ -171,7 +157,7 @@
     const glitch = () => {
       if (!title) return;
       title.classList.remove('is-glitching');
-      void title.offsetWidth; // restart animacji
+      void title.offsetWidth;
       title.classList.add('is-glitching');
     };
 
@@ -181,7 +167,6 @@
       return;
     }
 
-    // Napis pojawia się od razu, a sekwencja pisze się w tle
     setTimeout(() => hero.classList.add('is-booted'), 350);
     setTimeout(glitch, 1300);
     setInterval(() => { if (!document.hidden && window.scrollY < window.innerHeight) glitch(); }, 6500);
@@ -215,7 +200,6 @@
     setTimeout(type, 200);
   }
 
-  /* ---------- 7. GALERIA: lightbox ---------- */
   function initLightbox() {
     const lb = $('#lightbox');
     const items = $$('.g-item');
@@ -271,7 +255,6 @@
       if (e.key === 'ArrowRight') show(index + 1);
     });
 
-    // Przesuwanie palcem na telefonie
     let startX = null;
     lb.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
     lb.addEventListener('touchend', (e) => {
@@ -282,13 +265,11 @@
     });
   }
 
-  /* ---------- 8. DROBIAZGI ---------- */
   function initMisc() {
     const year = $('[data-year]');
     if (year) year.textContent = new Date().getFullYear();
   }
 
-  /* ---------- START ---------- */
   initImages();
   initNav();
   initHero();

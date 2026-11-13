@@ -7,8 +7,6 @@
   <meta name="description" content="Spark-8: robot z napędem mecanum i 6-osiowym ramieniem, sterowany przez dwóch operatorów. Poznaj robota i zespół, który go zbudował.">
   <meta name="theme-color" content="#0B0B0D">
 
-  <!-- OPEN GRAPH (podgląd linku po udostępnieniu).
-       Po wrzuceniu na GitHub Pages podmień adresy na pełne, adres strony: https://spark8-team.github.io/ -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
   <meta property="og:title" content="Spark-8 — robot konkursowy">
@@ -17,50 +15,21 @@
   <meta property="og:url" content="https://spark8-team.github.io/">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- FAVICON: pomarańczowa iskra (inline SVG, nie wymaga pliku) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0B0D'/%3E%3Cpath d='M37 6 14 38h14l-4 20 23-32H33z' fill='%23F5A21C'/%3E%3C/svg%3E">
 
-  <!-- CZCIONKI -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <!-- Zaznacza, że JS działa (bez JS strona i tak pokazuje całą treść) -->
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- ╔══════════════════════════════════════════════════════════════════╗
-       ║  SPIS ZDJĘĆ: szukaj w kodzie (Ctrl+F) frazy "ZDJĘCIE 01" itd.     ║
-       ╚══════════════════════════════════════════════════════════════════╝
-       JAK WSTAWIĆ ZDJĘCIE:
-         1. Wrzuć plik do folderu images/ (najlepiej .webp lub .jpg, max ok. 1600 px szerokości).
-         2. Znajdź w kodzie jego numer i wpisz nazwę pliku w src="images/twoj-plik.jpg".
-         3. W alt="..." wpisz krótki opis zdjęcia.
-         Jeśli nazwiesz plik dokładnie tak jak w spisie, nie musisz zmieniać kodu.
-         Dopóki zdjęcia nie ma, na stronie widać pomarańczową ramkę z numerem.
-
-       ✔ 01  robot-hero.webp      Hero, główne zdjęcie robota      pionowe 2:3
-       ✔ 02  konsola-pilot.webp   Ramię master: konsola i pilot    poziome 16:9
-         03  etap-1.webp          Historia, etap 1                 pionowe 4:5
-         04  etap-2.webp          Historia, etap 2                 poziome 3:2
-         05  etap-3.webp          Historia, etap 3                 kwadrat
-         06  etap-4a.webp         Historia, etap 4 (duże)          poziome 3:2
-         07  etap-4b.webp         Historia, etap 4 (mniejsze)      pionowe 7:9
-         08  etap-5.webp          Historia, etap 5                 poziome 3:2
-       ✔ 09  zespol-1.webp        Zespół, cała ekipa z robotem     poziome 14:9
-       ✔ 10  zespol-2.webp        Zespół, na scenie z nagrodami    pionowe 4:5
-       ✔ 11–16 osoba-1…6.webp     Zespół, zdjęcia osób             pionowe 4:5
-       ✔ 17–20 galeria-….webp     Galeria                          różne
-         og-image.jpg (w <head>): obrazek przy udostępnianiu linku, 1200×630
-  -->
   <a class="skip" href="#main">Przejdź do treści</a>
 
-  <!-- PASEK POSTĘPU PRZEWIJANIA -->
   <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
 
-  <!-- ================= NAGŁÓWEK I MENU ================= -->
   <header class="header">
     <div class="container header__inner">
       <a class="logo" href="#top" aria-label="Spark-8, przejdź na górę strony">
@@ -77,7 +46,6 @@
           <li><a href="#liczby">Liczby</a></li>
           <li><a href="#jak-dziala">Jak działa</a></li>
           <li><a href="#ramie">Ramię master</a></li>
-          <li><a href="#historia">Historia</a></li>
           <li><a href="#zespol">Zespół</a></li>
           <li><a href="#galeria">Galeria</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
@@ -89,7 +57,6 @@
 
   <main id="main">
 
-    <!-- ================= 1. HERO ================= -->
     <section class="hero" id="top">
       <div class="hero__bg" aria-hidden="true">
         <div class="hero__grid"></div>
@@ -98,7 +65,6 @@
 
       <div class="container hero__inner">
         <div class="hero__text">
-          <!-- Sekwencja "uruchamiania systemu" — treść linijek w script.js (sekcja HERO) -->
           <pre class="boot" data-boot aria-hidden="true"></pre>
           <p class="tag mono">xChallenge · robot konkursowy</p>
           <h1 class="hero__title glitch" data-text="SPARK-8">SPARK-8</h1>
@@ -109,24 +75,16 @@
           </div>
         </div>
 
-        <!-- ═════════ ZDJĘCIE 01 · HERO, GŁÓWNE ZDJĘCIE ROBOTA ═════════
-             Plik: images/robot-hero.webp   (pionowe, proporcje 2:3, np. 1000×1500)
-             Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-             W alt="..." napisz krótko, co jest na zdjęciu.
-             ✔ Już wstawione. Podmień tylko, jeśli zrobicie lepsze. -->
         <figure class="ph hud ph--glow hero__media reveal" data-dir="right" style="--ar:2/3">
           <div class="ph__inner">
             <img src="images/robot-hero.webp" alt="Robot Spark-8 na scenie zawodów xChallenge: ramię z chwytakiem na podwoziu z kołami mecanum" width="1000" height="1500" fetchpriority="high">
           </div>
-          <figcaption class="ph__label">robot-hero.webp</figcaption>
         </figure>
-        <!-- ═════════ KONIEC ZDJĘCIA 01 ═════════ -->
       </div>
 
       <a class="scroll-cue" href="#liczby" aria-label="Przewiń w dół"><span></span></a>
     </section>
 
-    <!-- PASEK Z PRZEWIJAJĄCYM SIĘ NAPISEM (ozdobnik) -->
     <div class="ticker" aria-hidden="true">
       <div class="ticker__track">
         <span>MECANUM</span><span>6 OSI</span><span>RASPBERRY PI 5</span><span>WI-FI 5 GHZ</span><span>~3 MS</span><span>2 OPERATORÓW</span>
@@ -134,7 +92,6 @@
       </div>
     </div>
 
-    <!-- ================= 2. ROBOT W LICZBACH ================= -->
     <section class="section" id="liczby">
       <div class="container">
         <header class="section-head reveal">
@@ -142,7 +99,6 @@
           <h2>Robot w liczbach</h2>
         </header>
 
-        <!-- Liczby zmienisz w atrybucie data-count (i w treści obok) -->
         <ul class="stats" data-stagger>
           <li class="stat reveal"><span class="stat__num"><span data-count="6">6</span></span><span class="stat__label">osi ramienia</span></li>
           <li class="stat reveal"><span class="stat__num"><span data-count="4">4</span></span><span class="stat__label">koła mecanum</span></li>
@@ -153,7 +109,6 @@
       </div>
     </section>
 
-    <!-- ================= 3. JAK DZIAŁA ================= -->
     <section class="section" id="jak-dziala">
       <div class="container">
         <header class="section-head reveal">
@@ -162,7 +117,6 @@
         </header>
 
         <ul class="cards" data-stagger>
-          <!-- Kafelek: napęd -->
           <li class="reveal cards__featured">
             <article class="card">
               <span class="card__num">01</span>
@@ -173,7 +127,6 @@
               <p>Cztery koła z ukośnymi rolkami. Robot jedzie do przodu, bokiem, po skosie i obraca się w miejscu, bez skręcania podwozia.</p>
             </article>
           </li>
-          <!-- Kafelek: ramię -->
           <li class="reveal">
             <article class="card">
               <span class="card__num">02</span>
@@ -184,7 +137,6 @@
               <p>Sześć osi zakończonych chwytakiem. Każdą oś napędza silnik DC z enkoderem, więc ramię zna swoje dokładne położenie.</p>
             </article>
           </li>
-          <!-- Kafelek: elektronika -->
           <li class="reveal">
             <article class="card">
               <span class="card__num">03</span>
@@ -195,7 +147,6 @@
               <p>Mózgiem jest Raspberry Pi 5. Każda z sześciu osi ramienia ma własne Arduino Nano, które steruje jej silnikiem.</p>
             </article>
           </li>
-          <!-- Kafelek: łączność -->
           <li class="reveal">
             <article class="card">
               <span class="card__num">04</span>
@@ -206,7 +157,6 @@
               <p>Własna sieć Wi-Fi 5 GHz na pokładzie. Opóźnienie około 3 ms, więc ruch operatora i reakcja robota są niemal równoczesne.</p>
             </article>
           </li>
-          <!-- Kafelek: głos -->
           <li class="reveal">
             <article class="card">
               <span class="card__num">05</span>
@@ -221,7 +171,6 @@
       </div>
     </section>
 
-    <!-- ================= 4. RAMIĘ MASTER ================= -->
     <section class="section" id="ramie">
       <div class="container">
         <div class="master">
@@ -232,11 +181,6 @@
             </header>
             <p class="lead reveal">Operator porusza małą kopią ramienia na potencjometrach. Spark-8 odczytuje jej położenie i w czasie rzeczywistym powtarza każdy ruch.</p>
 
-            <div class="prose reveal">
-              <!-- TEKST: RAMIĘ MASTER, DŁUŻSZY OPIS -->
-              <p class="ph-text">[Tu wklej tekst]</p>
-            </div>
-
             <ul class="operators" data-stagger>
               <li class="operator reveal">
                 <span class="mono accent">OPERATOR 1</span>
@@ -246,29 +190,20 @@
               <li class="operator reveal">
                 <span class="mono accent">OPERATOR 2</span>
                 <strong>Pilot z joystickami</strong>
-                <span><!-- TEKST: za co odpowiada operator 2 -->[Tu wklej tekst]</span>
               </li>
             </ul>
           </div>
 
-          <!-- ═════════ ZDJĘCIE 02 · RAMIĘ MASTER, KONSOLA I PILOT ═════════
-               Plik: images/konsola-pilot.webp   (poziome, proporcje 16:9, np. 1600×900)
-               Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-               W alt="..." napisz krótko, co jest na zdjęciu.
-               ✔ Już wstawione. Zamiast zdjęcia może tu być film: zamień <img ...> na <video src="images/film.mp4" autoplay muted loop playsinline></video> -->
           <div class="master__media reveal" data-dir="right">
             <figure class="ph hud" style="--ar:16/9">
               <div class="ph__inner">
                 <img src="images/konsola-pilot.webp" alt="Konsola główna z miniaturowym ramieniem master (po lewej) i pilot z joystickami (po prawej)" width="1600" height="900" loading="lazy" data-parallax="0.05">
               </div>
-              <figcaption class="ph__label">konsola-pilot.webp</figcaption>
             </figure>
             <p class="media-cap"><span class="accent">◀</span> Konsola z ramieniem master · Pilot z joystickami <span class="accent">▶</span></p>
           </div>
-          <!-- ═════════ KONIEC ZDJĘCIA 02 ═════════ -->
         </div>
 
-        <!-- Schemat przepływu sygnału -->
         <ol class="flow reveal" aria-label="Droga sygnału od ramienia master do robota">
           <li class="flow__node"><span class="mono">IN</span>Ramię master<small>potencjometry</small></li>
           <li class="flow__link" aria-hidden="true"></li>
@@ -283,297 +218,93 @@
       </div>
     </section>
 
-    <!-- ================= 5. HISTORIA BUDOWY ================= -->
-    <section class="section" id="historia">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow">04 // historia</p>
-          <h2>Historia budowy</h2>
-        </header>
-
-        <div class="timeline" data-timeline>
-          <div class="timeline__track" aria-hidden="true"><span class="timeline__progress"></span></div>
-
-          <!-- ───── ETAP 1: tekst po lewej, zdjęcie po prawej ───── -->
-          <article class="tl-item tl-item--a">
-            <span class="tl-item__dot" aria-hidden="true"></span>
-            <div class="tl-item__text reveal">
-              <p class="tl-item__step">ETAP 01 · <!-- DATA ETAPU 1 -->[data]</p>
-              <h3><!-- TYTUŁ ETAPU 1 -->[Tytuł etapu]</h3>
-              <div class="prose">
-                <!-- TEKST: HISTORIA, ETAP 1 -->
-                <p class="ph-text">[Tu wklej tekst]</p>
-              </div>
-            </div>
-            <!-- ═════════ ZDJĘCIE 03 · HISTORIA, ETAP 1 ═════════
-                 Plik: images/etap-1.webp   (pionowe, proporcje 4:5, np. 800×1000)
-                 Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-                 W alt="..." napisz krótko, co jest na zdjęciu. -->
-            <figure class="ph hud tl-item__media w-85r offset-md reveal" data-dir="right" style="--ar:800/1000">
-              <div class="ph__inner"><img src="images/etap-1.webp" alt="[Opis zdjęcia: etap 1]" width="800" height="1000" loading="lazy" data-parallax="0.05"></div>
-              <figcaption class="ph__label">ZDJĘCIE 03<br>etap-1.webp<br>pionowe, proporcje 4:5, np. 800×1000</figcaption>
-            </figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 03 ═════════ -->
-          </article>
-
-          <!-- ───── ETAP 2: zdjęcie po lewej, tekst po prawej ───── -->
-          <article class="tl-item tl-item--b">
-            <span class="tl-item__dot" aria-hidden="true"></span>
-            <div class="tl-item__text reveal">
-              <p class="tl-item__step">ETAP 02 · <!-- DATA ETAPU 2 -->[data]</p>
-              <h3><!-- TYTUŁ ETAPU 2 -->[Tytuł etapu]</h3>
-              <div class="prose">
-                <!-- TEKST: HISTORIA, ETAP 2 -->
-                <p class="ph-text">[Tu wklej tekst]</p>
-              </div>
-            </div>
-            <!-- ═════════ ZDJĘCIE 04 · HISTORIA, ETAP 2 ═════════
-                 Plik: images/etap-2.webp   (poziome, proporcje 3:2, np. 1200×800)
-                 Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-                 W alt="..." napisz krótko, co jest na zdjęciu. -->
-            <figure class="ph tl-item__media ph--glow w-full offset-sm reveal" data-dir="left" style="--ar:1200/800">
-              <div class="ph__inner"><img src="images/etap-2.webp" alt="[Opis zdjęcia: etap 2]" width="1200" height="800" loading="lazy" data-parallax="0.05"></div>
-              <figcaption class="ph__label">ZDJĘCIE 04<br>etap-2.webp<br>poziome, proporcje 3:2, np. 1200×800</figcaption>
-            </figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 04 ═════════ -->
-          </article>
-
-          <!-- ───── ETAP 3: tekst po lewej, zdjęcie po prawej ───── -->
-          <article class="tl-item tl-item--a">
-            <span class="tl-item__dot" aria-hidden="true"></span>
-            <div class="tl-item__text reveal">
-              <p class="tl-item__step">ETAP 03 · <!-- DATA ETAPU 3 -->[data]</p>
-              <h3><!-- TYTUŁ ETAPU 3 -->[Tytuł etapu]</h3>
-              <div class="prose">
-                <!-- TEKST: HISTORIA, ETAP 3 -->
-                <p class="ph-text">[Tu wklej tekst]</p>
-              </div>
-            </div>
-            <!-- ═════════ ZDJĘCIE 05 · HISTORIA, ETAP 3 ═════════
-                 Plik: images/etap-3.webp   (kwadrat, np. 900×900)
-                 Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-                 W alt="..." napisz krótko, co jest na zdjęciu. -->
-            <figure class="ph hud tl-item__media w-85l offset-lg reveal" data-dir="right" style="--ar:1/1">
-              <div class="ph__inner"><img src="images/etap-3.webp" alt="[Opis zdjęcia: etap 3]" width="900" height="900" loading="lazy" data-parallax="0.05"></div>
-              <figcaption class="ph__label">ZDJĘCIE 05<br>etap-3.webp<br>kwadrat, np. 900×900</figcaption>
-            </figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 05 ═════════ -->
-          </article>
-
-          <!-- ───── ETAP 4: dwa zdjęcia po lewej (duże + mniejsze nachodzące), tekst po prawej ───── -->
-          <article class="tl-item tl-item--b">
-            <span class="tl-item__dot" aria-hidden="true"></span>
-            <div class="tl-item__text reveal">
-              <p class="tl-item__step">ETAP 04 · <!-- DATA ETAPU 4 -->[data]</p>
-              <h3><!-- TYTUŁ ETAPU 4 -->[Tytuł etapu]</h3>
-              <div class="prose">
-                <!-- TEKST: HISTORIA, ETAP 4 -->
-                <p class="ph-text">[Tu wklej tekst]</p>
-              </div>
-            </div>
-            <div class="collage tl-item__media">
-              <!-- ═════════ ZDJĘCIE 06 · HISTORIA, ETAP 4 (DUŻE) ═════════
-                   Plik: images/etap-4a.webp   (poziome, proporcje 3:2, np. 1200×800)
-                   Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-                   W alt="..." napisz krótko, co jest na zdjęciu. -->
-              <figure class="ph w-85l reveal" data-dir="left" style="--ar:1200/800">
-                <div class="ph__inner"><img src="images/etap-4a.webp" alt="[Opis zdjęcia: etap 4]" width="1200" height="800" loading="lazy" data-parallax="0.04"></div>
-                <figcaption class="ph__label">ZDJĘCIE 06<br>etap-4a.webp<br>poziome · 1200 × 800</figcaption>
-              </figure>
-              <!-- ═════════ KONIEC ZDJĘCIA 06 ═════════ -->
-              <!-- ═════════ ZDJĘCIE 07 · HISTORIA, ETAP 4 (MNIEJSZE) ═════════
-                   Plik: images/etap-4b.webp   (pionowe, proporcje 7:9, np. 700×900)
-                   Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-                   W alt="..." napisz krótko, co jest na zdjęciu.
-                   Nachodzi na róg dużego zdjęcia, dobre na detal (np. chwytak). -->
-              <figure class="ph hud ph--glow collage__small reveal" data-dir="up" style="--ar:700/900">
-                <div class="ph__inner"><img src="images/etap-4b.webp" alt="[Opis zdjęcia: detal z etapu 4]" width="700" height="900" loading="lazy"></div>
-                <figcaption class="ph__label">ZDJĘCIE 07<br>etap-4b.webp<br>pionowe · 700 × 900</figcaption>
-              </figure>
-              <!-- ═════════ KONIEC ZDJĘCIA 07 ═════════ -->
-            </div>
-          </article>
-
-          <!-- ───── ETAP 5: tekst po lewej, zdjęcie po prawej ───── -->
-          <article class="tl-item tl-item--a">
-            <span class="tl-item__dot" aria-hidden="true"></span>
-            <div class="tl-item__text reveal">
-              <p class="tl-item__step">ETAP 05 · <!-- DATA ETAPU 5 -->[data]</p>
-              <h3><!-- TYTUŁ ETAPU 5 -->[Tytuł etapu]</h3>
-              <div class="prose">
-                <!-- TEKST: HISTORIA, ETAP 5 -->
-                <p class="ph-text">[Tu wklej tekst]</p>
-              </div>
-            </div>
-            <!-- ═════════ ZDJĘCIE 08 · HISTORIA, ETAP 5 ═════════
-                 Plik: images/etap-5.webp   (poziome, proporcje 3:2, np. 1200×800)
-                 Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-                 W alt="..." napisz krótko, co jest na zdjęciu. -->
-            <figure class="ph hud ph--glow tl-item__media w-85r offset-md reveal" data-dir="right" style="--ar:1200/800">
-              <div class="ph__inner"><img src="images/etap-5.webp" alt="[Opis zdjęcia: etap 5]" width="1200" height="800" loading="lazy" data-parallax="0.05"></div>
-              <figcaption class="ph__label">ZDJĘCIE 08<br>etap-5.webp<br>poziome, proporcje 3:2, np. 1200×800</figcaption>
-            </figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 08 ═════════ -->
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 6. ZESPÓŁ ================= -->
     <section class="section" id="zespol">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">05 // zespół</p>
+          <p class="eyebrow">04 // zespół</p>
           <h2>O nas</h2>
         </header>
 
         <div class="about">
-          <div class="about__text prose reveal">
-            <!-- TEKST: O NAS, AKAPIT 1 (dłuższa "ściana tekstu" — możesz dodać więcej <p>) -->
-            <p class="ph-text ph-text--long">[Tu wklej tekst]</p>
-            <!-- TEKST: O NAS, AKAPIT 2 -->
-            <p class="ph-text">[Tu wklej tekst]</p>
-          </div>
-
           <div class="about__collage">
-            <!-- ═════════ ZDJĘCIE 09 · ZESPÓŁ, CAŁA EKIPA Z ROBOTEM ═════════
-                 Plik: images/zespol-1.webp   (poziome, proporcje 14:9, np. 1400×900)
-                 Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-                 W alt="..." napisz krótko, co jest na zdjęciu.
-                 Na komputerze wychodzi lekko poza prawą krawędź. -->
-            <figure class="ph hud bleed-r w-full reveal" data-dir="right" style="--ar:1400/900">
+            <figure class="ph hud w-full reveal" data-dir="right" style="--ar:1400/900">
               <div class="ph__inner"><img src="images/zespol-1.webp" alt="Zespół SparkTeam z robotem Spark-8 i nagrodami: III miejsce na zawodach, najlepsza prezentacja, opiekun drużyny" width="1400" height="900" loading="lazy" data-parallax="0.05"></div>
-              <figcaption class="ph__label">ZDJĘCIE 09<br>zespol-1.webp<br>poziome · 1400 × 900</figcaption>
             </figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 09 ═════════ -->
-            <!-- ═════════ ZDJĘCIE 10 · ZESPÓŁ, PRZY PRACY ═════════
-                 Plik: images/zespol-2.webp   (pionowe, proporcje 4:5, np. 800×1000)
-                 Wrzuć zdjęcie do folderu images/ i wpisz jego nazwę w src="images/...".
-                 W alt="..." napisz krótko, co jest na zdjęciu.
-                 Nachodzi na róg zdjęcia 09. -->
             <figure class="ph ph--glow about__small reveal" data-dir="up" style="--ar:800/1000">
               <div class="ph__inner"><img src="images/zespol-2.webp" alt="Zespół SparkTeam na scenie xChallenge z nagrodami i robotem Spark-8" width="800" height="1000" loading="lazy"></div>
-              <figcaption class="ph__label">ZDJĘCIE 10<br>zespol-2.webp<br>pionowe · 800 × 1000</figcaption>
             </figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 10 ═════════ -->
           </div>
         </div>
 
-        <h3 class="subhead reveal">Skład zespołu</h3>
-        <!-- KARTY OSÓB: każda karta = zdjęcie + imię + rola.
-             Usuń lub skopiuj cały blok <li> ... </li>, żeby zmienić liczbę osób. -->
+        <h3 class="subhead reveal">Nasza drużyna 2026</h3>
         <ul class="team" data-stagger>
           <li class="reveal"><article class="member">
-            <!-- ═════════ ZDJĘCIE 11 · ZESPÓŁ, OSOBA 1 ═════════
-                 Plik: images/osoba-1.webp   (pionowe portretowe, proporcje 4:5, np. 600×750)
-                 Wpisz nazwę pliku w src="images/..." i imię osoby w alt="...". -->
-            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-1.webp" alt="Stanisław Gajewski" width="600" height="750" loading="lazy"></div><figcaption class="ph__label">ZDJĘCIE 11<br>osoba-1.webp<br>600 × 750</figcaption></figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 11 ═════════ -->
-            <div class="member__info"><p class="member__name"><!-- IMIĘ 1 -->Stanisław Gajewski</p><p class="member__role"><!-- ROLA 1 -->[Rola]</p></div>
+            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-1.webp" alt="Stanisław Gajewski" width="600" height="750" loading="lazy"></div></figure>
+            <div class="member__info"><p class="member__name">Stanisław Gajewski</p></div>
           </article></li>
           <li class="reveal"><article class="member">
-            <!-- ═════════ ZDJĘCIE 12 · ZESPÓŁ, OSOBA 2 ═════════
-                 Plik: images/osoba-2.webp   (pionowe portretowe, proporcje 4:5, np. 600×750)
-                 Wpisz nazwę pliku w src="images/..." i imię osoby w alt="...". -->
-            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-2.webp" alt="Aneta Burczyk" width="600" height="750" loading="lazy"></div><figcaption class="ph__label">ZDJĘCIE 12<br>osoba-2.webp<br>600 × 750</figcaption></figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 12 ═════════ -->
-            <div class="member__info"><p class="member__name"><!-- IMIĘ 2 -->Aneta Burczyk</p><p class="member__role"><!-- ROLA 2 -->[Rola]</p></div>
+            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-2.webp" alt="Aneta Burczyk" width="600" height="750" loading="lazy"></div></figure>
+            <div class="member__info"><p class="member__name">Aneta Burczyk</p></div>
           </article></li>
           <li class="reveal"><article class="member">
-            <!-- ═════════ ZDJĘCIE 13 · ZESPÓŁ, OSOBA 3 ═════════
-                 Plik: images/osoba-3.webp   (pionowe portretowe, proporcje 4:5, np. 600×750)
-                 Wpisz nazwę pliku w src="images/..." i imię osoby w alt="...". -->
-            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-3.webp" alt="Igor Bednarczyk" width="600" height="750" loading="lazy"></div><figcaption class="ph__label">ZDJĘCIE 13<br>osoba-3.webp<br>600 × 750</figcaption></figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 13 ═════════ -->
-            <div class="member__info"><p class="member__name"><!-- IMIĘ 3 -->Igor Bednarczyk</p><p class="member__role"><!-- ROLA 3 -->[Rola]</p></div>
+            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-3.webp" alt="Igor Bednarczyk" width="600" height="750" loading="lazy"></div></figure>
+            <div class="member__info"><p class="member__name">Igor Bednarczyk</p></div>
           </article></li>
           <li class="reveal"><article class="member">
-            <!-- ═════════ ZDJĘCIE 14 · ZESPÓŁ, OSOBA 4 ═════════
-                 Plik: images/osoba-4.webp   (pionowe portretowe, proporcje 4:5, np. 600×750)
-                 Wpisz nazwę pliku w src="images/..." i imię osoby w alt="...". -->
-            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-4.webp" alt="Karolina Burczyk" width="600" height="750" loading="lazy"></div><figcaption class="ph__label">ZDJĘCIE 14<br>osoba-4.webp<br>600 × 750</figcaption></figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 14 ═════════ -->
-            <div class="member__info"><p class="member__name"><!-- IMIĘ 4 -->Karolina Burczyk</p><p class="member__role"><!-- ROLA 4 -->[Rola]</p></div>
+            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-4.webp" alt="Karolina Burczyk" width="600" height="750" loading="lazy"></div></figure>
+            <div class="member__info"><p class="member__name">Karolina Burczyk</p></div>
           </article></li>
           <li class="reveal"><article class="member">
-            <!-- ═════════ ZDJĘCIE 15 · ZESPÓŁ, OSOBA 5 ═════════
-                 Plik: images/osoba-5.webp   (pionowe portretowe, proporcje 4:5, np. 600×750)
-                 Wpisz nazwę pliku w src="images/..." i imię osoby w alt="...". -->
-            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-5.webp" alt="[Imię Burczyk]" width="600" height="750" loading="lazy"></div><figcaption class="ph__label">ZDJĘCIE 15<br>osoba-5.webp<br>600 × 750</figcaption></figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 15 ═════════ -->
-            <div class="member__info"><p class="member__name"><!-- IMIĘ 5 -->[Imię Burczyk]</p><p class="member__role"><!-- ROLA 5 -->[Rola]</p></div>
+            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-5.webp" alt="Członek zespołu SparkTeam" width="600" height="750" loading="lazy"></div></figure>
           </article></li>
           <li class="reveal"><article class="member">
-            <!-- ═════════ ZDJĘCIE 16 · ZESPÓŁ, OSOBA 6 ═════════
-                 Plik: images/osoba-6.webp   (pionowe portretowe, proporcje 4:5, np. 600×750)
-                 Wpisz nazwę pliku w src="images/..." i imię osoby w alt="...". -->
-            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-6.webp" alt="[Imię i nazwisko]" width="600" height="750" loading="lazy"></div><figcaption class="ph__label">ZDJĘCIE 16<br>osoba-6.webp<br>600 × 750</figcaption></figure>
-            <!-- ═════════ KONIEC ZDJĘCIA 16 ═════════ -->
-            <div class="member__info"><p class="member__name"><!-- IMIĘ 6 -->[Imię Nazwisko]</p><p class="member__role"><!-- ROLA 6 -->[Rola]</p></div>
+            <figure class="ph" style="--ar:4/5"><div class="ph__inner"><img src="images/osoba-6.webp" alt="Członek zespołu SparkTeam" width="600" height="750" loading="lazy"></div></figure>
           </article></li>
         </ul>
       </div>
     </section>
 
-    <!-- ================= 7. GALERIA ================= -->
     <section class="section" id="galeria">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow">06 // galeria</p>
+          <p class="eyebrow">05 // galeria</p>
           <h2>Galeria</h2>
         </header>
 
-        <!-- ═════════ ZDJĘCIA 17–20 · GALERIA ═════════
-             ✔ Już wstawione. Jedna linia <a ...> = jedno zdjęcie.
-             Nazwę pliku wpisz DWA razy: w href="images/..." (podgląd na pełnym ekranie) i w src="images/...".
-             Rozmiar kafelka: g-item--tall = pionowe, g-item--wide = poziome, g-item--big = duży kwadrat, bez klasy = mały kwadrat. -->
         <div class="gallery" data-stagger>
           <a class="g-item g-item--tall reveal" href="images/galeria-robot-bok.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-robot-bok.webp" alt="Spark-8 z boku: ramię, chwytak i podwozie mecanum" width="900" height="1600" loading="lazy"></div></div></a>
           <a class="g-item g-item--wide reveal" href="images/galeria-zasieg.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-zasieg.webp" alt="Ramię Spark-8 w pełnym wysięgu trzyma paczkę cukru przy ścianie" width="1600" height="900" loading="lazy"></div></div></a>
           <a class="g-item g-item--tall reveal" href="images/galeria-kolo-mecanum.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-kolo-mecanum.webp" alt="Zbliżenie koła mecanum z ukośnymi rolkami" width="900" height="1600" loading="lazy"></div></div></a>
           <a class="g-item g-item--wide reveal" href="images/galeria-przekladnia.webp"><div class="ph"><div class="ph__inner"><img src="images/galeria-przekladnia.webp" alt="Zbliżenie przekładni zębatej w ramieniu" width="1600" height="900" loading="lazy"></div></div></a>
-          <!-- ▼ NOWE ZDJĘCIE DO GALERII: skopiuj jedną z linii <a ...> powyżej i wklej tutaj, potem podmień nazwę pliku (2×) i opis w alt. -->
-        <!-- ═════════ KONIEC GALERII ═════════ -->
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ================= 8. STOPKA ================= -->
   <footer class="footer" id="kontakt">
     <div class="container">
-      <!-- LOGO ZESPOŁU (jasna wersja na ciemne tło) -->
       <img class="footer__brand reveal" src="images/sparkteam-logo-light.png" alt="SparkTeam" width="1400" height="446" loading="lazy">
-      <p class="eyebrow reveal">07 // kontakt</p>
+      <p class="eyebrow reveal">06 // kontakt</p>
       <h2 class="footer__cta reveal">Spotkajmy się<br>przy <span class="accent">robocie.</span></h2>
 
       <div class="footer__grid">
         <div class="reveal">
           <h3 class="footer__title">Kontakt</h3>
           <ul class="footer__list">
-            <!-- KONTAKT -->
             <li><a href="mailto:spark.8.sparkteam@gmail.com">spark.8.sparkteam@gmail.com</a></li>
-            <li><span>[Szkoła / miasto]</span></li>
+            <li><span>Rzeszów</span></li>
           </ul>
         </div>
 
         <div class="reveal">
           <h3 class="footer__title">Sponsorzy</h3>
-          <!-- SPONSORZY: jasne logotypy (PNG z przezroczystym tłem). Nowego sponsora dodaj jako kolejne <li>. -->
           <ul class="sponsors">
             <li><img class="sponsor sponsor--square" src="images/sponsor-donum-corde.png" alt="Donum Corde – Centrum Rehabilitacji, Domy Opieki Medycznej" width="600" height="597" loading="lazy"></li>
             <li><img class="sponsor sponsor--wide" src="images/sponsor-kochanowicz.png" alt="Kochanowicz – Budowa i utrzymanie dróg" width="900" height="225" loading="lazy"></li>
           </ul>
         </div>
 
-        <div class="reveal">
-          <h3 class="footer__title">Linki</h3>
-          <!-- LINKI: w href="#" wklej link do kanału YouTube -->
-          <ul class="footer__list">
-            <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
-          </ul>
-        </div>
       </div>
 
       <div class="footer__bottom">
@@ -583,7 +314,6 @@
     </div>
   </footer>
 
-  <!-- LIGHTBOX (podgląd zdjęć z galerii) -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia" aria-hidden="true">
     <button class="lightbox__btn lightbox__close" type="button" aria-label="Zamknij podgląd">✕</button>
     <button class="lightbox__btn lightbox__prev" type="button" aria-label="Poprzednie zdjęcie">‹</button>
